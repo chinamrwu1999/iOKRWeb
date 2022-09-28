@@ -1,0 +1,35 @@
+<div class="main">
+      <div class="content">
+            <header>新建Goal</header>
+            <div class="row">
+                <span class="col1">目标名称:</span>
+                <span class="col2">
+                     <input type="text" name="title" [(ngModel)]="title" class="title">
+                </span>
+            </div>
+            <div class="row">
+                <span class="col1">截止日期:</span>
+                <span class="col2">
+                     <input type="date" name="dueDate" [(ngModel)]="dueDate">
+                </span>
+            </div>
+            <div class="row">
+                <span class="col1">目标类型:</span>
+                <span class="col2">
+                    <input type="radio" value="T" name="isTeamGoal" [ngModel]="isTeamGoal"> 团队
+                    <input type="radio" value="P" name="isTeamGoal" [ngModel]="isTeamGoal"> 个人
+                </span>
+            </div>
+            
+            <div class="buttons">
+                <span></span>
+                <span></span>
+                 <button (click)="submit()">提交</button>
+                
+                <button (click)="reset()">重置</button>
+                <span></span>
+                <span></span>
+            </div>
+            
+      </div>
+</div>

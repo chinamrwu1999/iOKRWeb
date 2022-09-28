@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { UtilsModule } from './utils/utils.module';
 import { OKRComponent } from './okr/okr.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AddGoalComponent } from './Goal/add-goal/add-goal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OKRComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AddGoalComponent
   ],
   imports: [
     BrowserModule,

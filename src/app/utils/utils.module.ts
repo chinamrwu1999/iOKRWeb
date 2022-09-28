@@ -5,10 +5,12 @@ import { NavigatorsComponent } from './navigators/navigators.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { OKRComponent } from '../okr/okr.component';
+import { AddGoalComponent } from '../Goal/add-goal/add-goal.component';
 
 
 const routes: Routes = [
-  {path:'OKR',component:OKRComponent},
+  {path:'OKR',component:AddGoalComponent},
+
 ]
 
 
