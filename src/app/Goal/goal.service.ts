@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -11,6 +11,16 @@ export class GoalService {
   ) { }
 
   PostGoal(obj:any){
-     return(this.http.post<any>(`/goal/add`,obj))
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+     return(this.http.post<any>(`/goal/add`,
+     obj,
+      {headers: headers}
+     ))
+  }
+
+  getGoals(){
+     return(this.http.get<any>(`/goals`))
   }
 }

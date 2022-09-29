@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { GoalService } from '../goal.service';
 
@@ -17,17 +18,23 @@ export class AddGoalComponent implements OnInit {
   ngOnInit(): void {
   }
    submit(){
+         let date1=new Date(this.dueDate)
          let obj={
-           'title':this.title,
-           'dueDate':this.dueDate,
-           'isTeamGoal':this.isTeamGoal
+           Title:this.title,
+           DueDate:date1.toISOString(),
+           IsTeamGoal:this.isTeamGoal
          }
-         console.log(obj)
+        
+         
          this.service.PostGoal(obj).subscribe(result=>{
-            console.log(result)
+           
          })
+         
    }
    reset(){
-
+           this.service.getGoals().subscribe(objs => {
+              console.log(objs)
+           })
+           console.log("List goals")
    }
 }

@@ -16,8 +16,8 @@
             <div class="row">
                 <span class="col1">目标类型:</span>
                 <span class="col2">
-                    <input type="radio" value="T" name="isTeamGoal" [ngModel]="isTeamGoal"> 团队
-                    <input type="radio" value="P" name="isTeamGoal" [ngModel]="isTeamGoal"> 个人
+                    <input type="radio" [value]="'T'" name="isTeamGoal" [(ngModel)]="isTeamGoal"> 团队
+                    <input type="radio" [value]="'P'" name="isTeamGoal" [(ngModel)]="isTeamGoal"> 个人
                 </span>
             </div>
             
